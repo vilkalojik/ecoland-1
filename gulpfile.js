@@ -1,5 +1,5 @@
-var del = require('del');
 var gulp = require('gulp');
+var del = require('del');
 var connect = require('gulp-connect');
 var less = require('gulp-less');
 var plumber = require('gulp-plumber');
@@ -76,7 +76,7 @@ gulp.task('less', function () {
         .pipe(plumber())
         .pipe(less(lessOptions))
         .pipe(concat('app.css'))
-        .pipe(minifyCSS())
+        // .pipe(minifyCSS())
         .pipe(gulp.dest(destination + 'css'));
 });
 

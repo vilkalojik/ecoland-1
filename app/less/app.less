@@ -1,1 +1,47 @@
-@import "cards";
+@import "variables";
+.homepage{
+  .navbar{
+    padding-top: 40px;
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    right: 0;
+    left: 0;
+    a{
+      color: @black;
+      font-weight: 600;
+      &:hover,
+      &:focus{
+        background: none ;
+        color: @linkHover;
+        outline: none;
+      }
+    }
+  }
+  .btn{
+    border: none;
+    border-radius: 50px;
+    box-shadow: none;
+    &:focus{
+      outline: none;
+    }
+    &.btn-primary{
+      color: @white;
+      background: @primary;
+      &:hover{
+        background: @ablue;
+        color: @white;
+      }
+    }
+    &.btn-default{
+      color: @black;
+      background: transparent;
+      border: 1px solid @linkHover;
+    }
+    &.btn-success{
+
+    }
+  }
+}
+
+@import "hero";
