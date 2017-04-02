@@ -32,10 +32,12 @@ var path = {
         ],
         css:[
             vendor + '/bootstrap/dist/css/bootstrap.min.css',
-            vendor + '/bootstrap/dist/css/bootstrap-theme.min.css'
+            vendor + '/bootstrap/dist/css/bootstrap-theme.min.css',
+            vendor + '/font-awesome/css/font-awesome.min.css'
         ],
         fonts:[
-            vendor + '/bootstrap/dist/fonts/**.**'
+            vendor + '/bootstrap/dist/fonts/**.**',
+            vendor + '/font-awesome/fonts/**.**'
         ]
     }
 };
@@ -57,7 +59,7 @@ gulp.task('vendorcss', function () {
         .pipe(gulp.dest(destination + 'vendor/css'))
 });
 gulp.task('vendorFonts', function(){
-    gulp.src(path.vendor.fonts, {base: vendor + '/bootstrap/dist/fonts/'})
+    gulp.src(path.vendor.fonts/*, {base: vendor + '/bootstrap/dist/fonts/'}*/)
         .pipe(gulp.dest(destination + 'vendor/fonts'));
 });
 
