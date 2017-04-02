@@ -2,6 +2,7 @@ var gulp = require('gulp');
 var del = require('del');
 var connect = require('gulp-connect');
 var less = require('gulp-less');
+var sass = require('gulp-sass');
 var plumber = require('gulp-plumber');
 var concat = require('gulp-concat');
 var minifyCSS = require('gulp-clean-css');
@@ -82,6 +83,15 @@ gulp.task('less', function () {
         .pipe(gulp.dest(destination + 'css'));
 });
 
+gulp.task('sass', function () {
+    gulp.src(app + 'sass/**/*.scss')
+        .pipe(plumber())
+        .pipe(sass())
+        .pipe(concat('app.css'))
+        // .pipe(minifyCSS())
+        .pipe(gulp.dest(destination + 'css'));
+});
+
 //server
 gulp.task('reload', function () {
   gulp.src(path.watch)
@@ -99,7 +109,7 @@ gulp.task('watch', function () {
 
 gulp.task('init', ['clean', 'copy']);
 gulp.task('vendor', ['vendorjs', 'vendorcss', 'vendorFonts']);
-gulp.task('app', ['js', 'less']);
+gulp.task('app', ['js', 'sass']);
 gulp.task('server', ['connect', 'watch']);
 
 //default task
