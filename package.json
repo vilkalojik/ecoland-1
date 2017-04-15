@@ -16,11 +16,8 @@
     "gulp-concat": "^2.6.1",
     "gulp-connect": "^5.0.0",
     "gulp-copy": "^1.0.0",
-    "gulp-haml": "^0.1.6",
     "gulp-less": "^3.3.0",
     "gulp-plumber": "^1.1.0",
-    "gulp-pug": "^3.3.0",
-    "gulp-sass": "^3.1.0",
     "gulp-watch": "^4.3.11",
     "less-plugin-autoprefix": "^1.5.1"
   }

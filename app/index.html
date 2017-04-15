@@ -1,19 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title>reCAPTCHA demo: Simple page</title>
-     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
-     <script>
-       function onSubmit(token) {
-          console.log(token);
-         document.getElementById("demo-form").submit();
-       }
-     </script>
-  </head>
-  <body>
-    <form id='demo-form' action="?" method="POST">
-      <button class="g-recaptcha" data-sitekey="6Lew0CITAAAAALT4VGtL4cWz1UgI-z7UuR-SWrI1" data-callback='onSubmit'>Submit</button>
-      <br/>
-    </form>
-  </body>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Home | New Providence</title>
+  <link rel="stylesheet" href="./vendor/css/vendor.css">
+  <link rel="stylesheet" href="./css/app.css">
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+  <!--[if lt IE 9]>
+  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+
+<div class="main-page">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="jumbotron hero">
+        <div class="container-fluid">
+          <div class="row">
+            <div class="col-xs-2">
+              <ul class="nav nav-stacked text-uppercase">
+                <li role="presentation" class="active"><a href="#">Главная</a></li>
+                <li role="presentation" class=""><a href="#">О Комплексе</a></li>
+                <li role="presentation" class=""><a href="#">Семейный Отдых</a></li>
+                <li role="presentation" class=""><a href="#">Home</a></li>
+                <li role="presentation"><a href="#">Услуги</a></li>
+                <li role="presentation"><a href="#">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="col-xs-offset-1 col-xs-6 text-center text-uppercase main-text">
+              <p class="sub-heading">развлекательный комплекс</p>
+              <h2 class="heading">эколандия. как мы превращаем семейный отдых в незабываемые воспоминания</h2>
+              <button class="btn btn-default text-uppercase">узнать больше</button>
+            </div>
+            <div class="col-xs-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="./vendor/js/vendor.js"></script>
+  <script src="js/app.js"></script>
+</body>
 </html>

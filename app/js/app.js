@@ -1,3 +1,3 @@
-(function () {
-    console.log('Hello World from app.js!');
-})();
+$(document).ready(function () {
+    $('.carousel.carousel-slider').carouselMaterialize({fullWidth: true});
+});
