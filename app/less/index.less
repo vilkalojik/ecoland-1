@@ -18,6 +18,10 @@ html>body .content {
   .cnt{
     align-self: center;
   }
+  @media (max-width: 500px){
+    display: block;
+    height:auto;
+  }
 }
 
 h2, h3{
@@ -25,6 +29,15 @@ h2, h3{
 }
 h2, h3, h4{
   margin-top: 0;
+}
+
+.bar{
+  width: 100px;
+  height: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -5px;
 }
 
 button{
@@ -108,6 +121,9 @@ button{
     button{
       border: 2px solid #252525;
     }
+    .bar{
+      background:#252525 ;
+    }
   }
 
   #carousel{
@@ -162,17 +178,21 @@ button{
         width: 100%;
         margin-bottom: 20px;
         overflow: hidden;
-        img{
-          -webkit-transform: scale(1);
-          transform: scale(1);
-          -webkit-transition: .3s ease-in-out;
-          transition: .3s ease-in-out;
+        width: 100%;
+        height: 200px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        transition: .3s ease-in-out;
           &:hover{
-            -webkit-transform: scale(1.3);
-            transform: scale(1.3);
+            background-size: 150%;
+            -webkit-transition: .3s ease-in-out;
+            transition: .3s ease-in-out;
           }
-        }
       }
+    }
+    .bar{
+      background: white;
     }
   }
 
