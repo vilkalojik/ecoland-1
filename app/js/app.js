@@ -11,7 +11,6 @@ var initMap = function() {
 };
 
 $(document).ready(function () {
-    // $('.carousel.carousel-slider').carouselMaterialize({fullWidth: true});
     initMap();
 
     $('.carousel').carousel({
@@ -22,6 +21,8 @@ $(document).ready(function () {
     var setCarouselImgHeight = function () {
         $('#carousel .img-cnt').each(function () { $(this).height($('#carousel').height()); })
     };
+
     setCarouselImgHeight();
+
     $(window).on('resize', setCarouselImgHeight);
 });

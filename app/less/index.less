@@ -1,63 +1,8 @@
-*{
-  font-family: 'PT Sans', sans-serif ;
-}
-
-html,body {
-  height:100%;
-  margin:0;
-}
-
-html>body .content {
-  height:auto;
-}
-.content {
-  height:100%;
-  min-height:100%;/*for mozilla*/
-  display: flex;
-  justify-content: center;
-  .cnt{
-    align-self: center;
-  }
-  @media (max-width: 500px){
-    display: block;
-    height:auto;
-  }
-}
-
-h2, h3{
-  font-size: 33pt;
-}
-h2, h3, h4{
-  margin-top: 0;
-}
-
-.bar{
-  width: 100px;
-  height: 3px;
-  display: inline-block;
-  vertical-align: middle;
-  position: relative;
-  top: -5px;
-}
-
-button{
-  &.btn-default{
-    background: none;
-    border: 2px solid white;
-    box-shadow: none;
-    text-shadow: none;
-    border-radius: 0px;
-    color: #f4a18e;
-    padding: 20px 40px;
-    outline: none;
-  }
-}
-
 .main-page{
   height: 100%;
+
   #hero-cnt{
     background: url(../assets/img/herobg.jpg) center center no-repeat scroll;
-
     .hero{
       align-self: center;
       background: none;
@@ -126,36 +71,51 @@ button{
     }
   }
 
-  #carousel{
-    height: 500px;
-    .carousel{
-      width:100%;
-      .row{
-        display: flex !important;
-      }
-      .img-cpt{
-        align-self: center;
-      }
-      .img-cnt{
-        background-size:contain;
-        background-position: center;
-        background-repeat: no-repeat;
-      }
-      .carousel-indicators{
-        left: 30px;
-        li{
-          border: 1px solid #000000;
-          background: #000000;
-          width: 6px;
-          height: 6px;
-          bottom: -1.5px;
-          position: relative;
-          &.active{
-            width: 12px;
-            height: 12px;
-            background: none;
-            bottom: -3px;
+  #carousel-cnt{
+    #carousel{
+      height: 500px;
+      .carousel{
+        width:100%;
+        .item-content-cnt{
+          display: flex;
+        }
+        .img-cpt{
+          align-self: center;
+        }
+        .img-cnt{
+          background-size:contain;
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+        .carousel-indicators{
+          left: 30px;
+          li{
+            border: 1px solid #000000;
+            background: #000000;
+            width: 6px;
+            height: 6px;
+            bottom: -1.5px;
+            position: relative;
+            &.active{
+              width: 12px;
+              height: 12px;
+              background: none;
+              bottom: -3px;
+            }
           }
+        }
+      }
+    }
+    @media (max-width: 992px){
+      padding-top: 30px;
+      padding-bottom: 30px;
+      #carousel{
+        height: auto;
+        .item-content-cnt{
+          display: block !important;
+        }
+        .carousel-indicators{
+          bottom: -25px;
         }
       }
     }
@@ -163,7 +123,10 @@ button{
 
   #gallery{
     color: white;
-    background: url(../assets/img/gallerybg.jpg) center center no-repeat scroll;
+    background: url(../assets/img/gallerybg.jpg) center center no-repeat;
+    @media (max-width: 992px){
+      background-size: cover;
+    }
     &>p{
       font-size: 16pt;
     }
@@ -172,23 +135,24 @@ button{
       margin-top: 50px;
       color: black;
       .img-fake{
-        -webkit-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
-        -moz-box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
         box-shadow: 0px 0px 100px 0px rgba(0,0,0,0.75);
         width: 100%;
         margin-bottom: 20px;
         overflow: hidden;
-        width: 100%;
-        height: 200px;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
-        transition: .3s ease-in-out;
+        img{
+          widht: 100%;
+          transform: scale(1);
+          transition: .3s ease-in-out;
           &:hover{
-            background-size: 150%;
-            -webkit-transition: .3s ease-in-out;
+            transform: scale(1.5);
             transition: .3s ease-in-out;
           }
+        }
+        @media (max-width: 992px) {
+          text-align: center;
+          box-shadow: none;
+          margin-top: 30px;
+        }
       }
     }
     .bar{
@@ -198,7 +162,10 @@ button{
 
   #map{
     width: 100%;
-    height: 600px;
+    height: 500px;
+    @media (max-width: 992px) {
+      height: 300px;
+    }
   }
 
   .footer{

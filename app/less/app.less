@@ -1,3 +1,57 @@
-html, body{
-  height: 100%;
+*{
+  font-family: 'PT Sans', sans-serif ;
+}
+
+html,body {
+  height:100%;
+  margin:0;
+}
+
+html>body .content {
+  height:auto;
+}
+.content {
+  height:100%;
+  min-height:100%;/*for mozilla*/
+  display: flex;
+  justify-content: center;
+  .cnt{
+    align-self: center;
+  }
+  @media (max-width: 992px){
+    display: block !important;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    height:auto;
+    min-height: auto;
+  }
+}
+
+h2, h3{
+  font-size: 33pt;
+}
+h1, h2, h3, h4, h5, h6{
+  margin-top: 0;
+}
+
+.bar{
+  width: 100px;
+  height: 3px;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+  top: -5px;
+}
+
+button{
+  &.btn-default{
+    background: none;
+    border: 2px solid white;
+    box-shadow: none;
+    text-shadow: none;
+    border-radius: 0px;
+    color: #f4a18e;
+    padding: 20px 40px;
+    outline: none;
+  }
 }
