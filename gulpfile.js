@@ -109,3 +109,9 @@ gulp.task('up', [
     'app',
     'server'
 ]);
+
+gulp.task('build', [
+    'init',
+    'vendor',
+    'app'
+]);
