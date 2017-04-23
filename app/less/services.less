@@ -1,3 +1,31 @@
 .services{
   height: 100%;
+  #services{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background: radial-gradient(ellipse at center, rgba(252,196,191,1) 0%, rgba(255,222,222,1) 64%, rgba(255,222,222,1) 100%);
+    @media(max-width: 992px){
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+
+    table{
+      margin-top: 60px;
+      margin-bottom: 60px;
+      tr, td{
+        border: none;
+      }
+      td{
+        padding: 20px 60px;
+        border-right: 2px solid #000000;
+        &:last-child{
+          border-right:none;
+        }
+      }
+    }
+
+    button{
+      border-color: #000000;
+    }
+  }
 }
